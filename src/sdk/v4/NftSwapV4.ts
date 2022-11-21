@@ -83,7 +83,7 @@ export enum SupportedChainIdsV4 {
   Fantom = 250,
   Celo = 42220,
   Avalance = 43114,
-  // Arbitrum = 42161, // soon
+  Arbitrum = 42161,
 }
 
 export const SupportedChainsForV4OrderbookStatusMonitoring = [
@@ -806,7 +806,7 @@ class NftSwapV4 implements INftSwapV4 {
           signedOrder,
           signedOrder.signature,
           fillOrderOverrides?.tokenIdToSellForCollectionOrder ??
-            signedOrder.erc1155TokenId,
+          signedOrder.erc1155TokenId,
           signedOrder.erc1155TokenAmount,
           unwrapNativeToken,
           '0x',
@@ -850,7 +850,7 @@ class NftSwapV4 implements INftSwapV4 {
           signedOrder,
           signedOrder.signature,
           fillOrderOverrides?.tokenIdToSellForCollectionOrder ??
-            signedOrder.erc721TokenId,
+          signedOrder.erc721TokenId,
           unwrapNativeToken,
           '0x',
           {
